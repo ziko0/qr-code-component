@@ -1,33 +1,32 @@
 :root{
     --font:'Outfit', sans-serif;
 
-    --fw-semi-bold: 400;
-    --fw-bold: 700;
-
-    --fs-100: 1rem;
-    --fs-200: 1.377rem;
-
-    --clr-primary-bg:#D5E1EF;
+    --clr-bg: #D5E1EF;
     --clr-card-bg: #FFFFFF;
-    --clr-title: #1F314F;
-    --clr-paragraph: #1F314F;
-    --clr-gray: #7D889E;
+    --clr-dark-gray: #1F314F;
+    --clr-light-gray: #7D889E;
+
+    --fw-bold: 700;
+    --fw-regular: 400;
+
+    --fs-100: 1.375em;
+    --fs-200: 0.938rem;
 }
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: var(--font);
+   
 }
 
 body{
-    background-color: var(--clr-primary-bg);
+    width: 100%;
+    height: 100vh;
+    background-color: var(--clr-bg);
+    font-family: var(--font);
 }
 
-main{
-    height: 100vh;
-}
 
 .container{
     max-width: 1440px;
@@ -38,51 +37,46 @@ main{
     align-items: center;
     justify-content: center;
     height: 100%;
+    margin: 0 auto;
 }
 
 .card{
     width: 320px;
     height: 497px;
-
-    display: flex;
-    flex-direction: column;
-    gap: 1.3rem;
-
+    padding: 16px;
     background-color: var(--clr-card-bg);
     box-shadow: 0px 25px 25px rgba(0, 0, 0, 0.0476518);
     border-radius: 20px;
 
-    text-align: center;
-    padding:  15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
 }
 
-.title{
-    font-weight:var(--fw-bold);
-    font-size: 22px;
-    line-height: 28px;
-    text-align: center;
-    color: var(--clr-paragraph);
-    font-size: var(--fs-200);
-}
-
-.description{
-    font-weight: var(--fw-semi-bold);
-    font-size: var(--fs-100);
-    line-height: 19px;
-    letter-spacing: 0.1875px;
-    color: var(--clr-gray);
-}
-
-.img-div{
+.img-block{
     width: 288px;
     height: 288px;
-    border-radius: 10px;
-
 }
 
 img{
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: 10px;
+}
 
+.title{
+    font-size: var(--fs-100);
+    font-weight: var(--fw-bold);
+    color: var(--clr-dark-gray);
+    text-align: center;
+}
+
+p{
+    margin-top: 8px;
+    font-size: var(--fs-200);
+    font-weight: var(--fw-regular);
+    color: var(--clr-light-gray);
+    text-align: center;
+    width: 238px;
 }
